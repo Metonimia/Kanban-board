@@ -23,6 +23,10 @@ $(function() {
 			var $columnDelete = $('<button>').addClass('btn-delete').text('x');
 			var $columnAddCard = $('<button>').addClass('add-card').text('Add a card');
 
+			if (!name.length) {
+				var $columnTitle = $('<h2>').addClass('column-title').text('Fantastic new column');
+			}
+
 			$columnDelete.click(function() {
 				self.removeColumn();
 			});
@@ -59,6 +63,10 @@ $(function() {
 			var $card = $('<li>').addClass('card');
 			var $cardDescription = $('<p>').addClass('card-description').text(self.description);
 			var $cardDelete = $('<button>').addClass('btn-delete').text('x');
+
+			if (!description.length) {
+				var $cardDescription = $('<p>').addClass('card-description').text('Even newer task!');
+			};
 
 			$cardDelete.click(function() {
 				self.removeCard();
