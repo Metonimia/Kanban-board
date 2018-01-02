@@ -27,6 +27,7 @@ div .column {
 
 ul {
 	list-style-type: none;
+	min-height: 10vh;
 }
 
 ul, menu, dir {
